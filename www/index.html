@@ -20,7 +20,7 @@
          
          function onOnline() {
              console.log("onOnline");
-             ref = cordova.InAppBrowser.open('https://matutodapraia.com.br/app', '_blank', 'location=no');
+             ref = cordova.InAppBrowser.open('https://matutodapraia.com.br/app/', '_blank', 'location=no');
              ref.addEventListener("exit", function(event) {navigator.notification.confirm('Você deseja sair da rádio?', onBackButton, 'Fique Conosco', ['NÃO','SIM']); }, false);
              if(ref) {
              	ocument.getElementById("loader-wrapper").style.display = "none";
