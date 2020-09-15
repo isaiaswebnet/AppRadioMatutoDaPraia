@@ -133,27 +133,23 @@ function onDeviceReady() {
 	        })
 	        .done(function(response){
 
-			var logo = '', fundo = '', header = '', footer = '';
-			
-			logo2 += '<a href="home.html"><img src="' + response.acf.logo2 + '" border="0" /></a>';
+			var header = '', footer = '';
 			
 			header += '<div class="gohome voltar"><a href="#" id="homebutton" onclick="window.open(document.referrer,\'_self\');"><i class="fa fa-chevron-circle-left fa-2x"></i></a></div>';
-            header += '<div class="gologo"><a href="home.html" id="contactbutton"><img src="' + response.acf.logo2 + '" /></a></div>';
-		    header += '<div class="gomenu"><a href="informacoes.html" id="contactbutton"><i class="fa fa-info-circle fa-2x"></i></a></div>';
+			header += '<div class="gologo"><a href="home.html" id="contactbutton"><img src="' + response.acf.logo2 + '" /></a></div>';
+			header += '<div class="gomenu"><a href="informacoes.html" id="contactbutton"><i class="fa fa-info-circle fa-2x"></i></a></div>';
 			
-            footer += '<div class="gohome"><a href="home.html"><i class="fa fa-home fa-2x"></i></a></div>';
+			footer += '<div class="gohome"><a href="home.html"><i class="fa fa-home fa-2x"></i></a></div>';
 			footer += '<div class="gohome"><a href="equipamentos.html"><i class="fa fa-video fa-2x"></i></a></div>';
 			footer += '<div class="gohome"><a href="equipamentos.html"><i class="fa fa-file-pdf fa-2x"></i></a></div>';
 			footer += '<div class="gohome"><a href="contato.html"><i class="fa fa-envelope fa-2x"></i></a></div>';
-		    
-			$('.logo2').append(logo);
-			
-			$('#header').append(header).css("background-color", response.acf.cor);
-		    $('#footer').append(footer).css("background-color", response.acf.cor2);
-		    
-		    $('ul.posts a').css("color", response.acf.cor);
-		    
-		    $('.toogle_wrap_blog').css("background-color", response.acf.cor);
+		        
+			$('#header').append(header);
+			$('#header').css("background-color", response.acf.cor);
+			$('#footer').append(footer);
+			$('#footer').css("background-color", response.acf.cor2);
+			$('ul.posts a').css("color", response.acf.cor);
+			$('.toogle_wrap_blog').css("background-color", response.acf.cor);
 		
 	});
 	
