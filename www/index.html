@@ -12,7 +12,30 @@
 //*********************************************************
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-$("#content").html("Hello, World! Demo JQuery Mobile com PhoneGap 2!");
+//$("#content").html("Hello, World! Demo JQuery Mobile com PhoneGap 2!");
+  
+  var jsonUrl = 'https://www.norimaq.com.br/tutormaq/wp-json/wp/v2/modelo_equipamento';
+		
+		$.ajax({
+		    dataType: 'json',
+		    url: jsonUrl,
+	        })
+	        .done(function(response){
+
+		    var output = '',  filterOutput = '', Categories = '';
+			
+			output += '<ul>';
+		    
+		    $.each(response,function(index,object){
+
+				    output += '<li><a href="equipamentos.html?cat=' + object.id + '" title="' + object.name + ' " class="insidelink"><img src="' + object.acf.imagem + '" /><span>' + object.name + '</span></a></li>';
+			});
+				    output += '</ul>';
+		
+		    $('#content').append(output);
+		
+	        });
+  
 }
 </script>
 </head>
