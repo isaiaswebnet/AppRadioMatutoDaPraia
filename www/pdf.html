@@ -62,12 +62,12 @@ window.plugins.PrintPDF.print({
     output += '<h2 class="page_title">' + response.title.rendered+ '</h2>';
 		$.each(response.acf,function(index,object){
 			$.each(object,function(value,object){
-				 output += '<figure id="video' + value + '" class="videocontainer pdf">';
+		             output += '<figure id="video' + value + '" class="videocontainer pdf">';
+			     output += '<a href="javascript:;" onclick="PrintPDF(' + object.pdf + ')">IMPRIMIR</a>';
 			     output += '<div>';
 			     //output += '<iframe id="video' + value + '" src="//docs.google.com/gview?url=' + object.pdf + '&embedded=true" frameborder="0"></iframe>';
 			     //output += '<iframe src="//drive.google.com/viewerng/viewer?embedded=true&url=' + object.pdf + '" frameborder="0"></iframe>';
 			     output += '<iframe src="https://www.norimaq.com.br/tutormaq/app/print/web/viewer.html?file=' + object.pdf + '" frameborder="0"></iframe>';
-			     output += '<a href="javascript:;" onclick="PrintPDF(' + object.pdf + ')">IMPRIMIR</a>';
 			     output += '<img class="mazoom" src="images/icons/mais-zoom.jpg" onclick="openFull' + value + '()" />';
 			     output += '<img id="mezoom' + value+ '" class="mezoom" src="images/icons/manos-zoom.jpg" onclick="closeFull' + value+ '()" />';
 			     output += '</div>';
