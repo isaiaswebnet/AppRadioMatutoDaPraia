@@ -20,7 +20,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 //$("#content").html("Hello, World! Demo JQuery Mobile com PhoneGap 2!"); 
 	
-function PrintPDF(encodedString) {
+function pPDF(encodedString) {
 //var encodedString = 'base64encodedStringHere';
 window.plugins.PrintPDF.print({
     data: encodedString,
@@ -63,7 +63,7 @@ window.plugins.PrintPDF.print({
 		$.each(response.acf,function(index,object){
 			$.each(object,function(value,object){
 		             output += '<figure id="video' + value + '" class="videocontainer pdf">';
-			     output += '<a href="javascript:;" onclick="PrintPDF(' + object.pdf + ')">IMPRIMIR</a>';
+			     output += '<a href="javascript:;" onclick="pPDF(' + object.pdf + ')">IMPRIMIR</a>';
 			     output += '<div>';
 			     //output += '<iframe id="video' + value + '" src="//docs.google.com/gview?url=' + object.pdf + '&embedded=true" frameborder="0"></iframe>';
 			     //output += '<iframe src="//drive.google.com/viewerng/viewer?embedded=true&url=' + object.pdf + '" frameborder="0"></iframe>';
