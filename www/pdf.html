@@ -23,8 +23,6 @@ function onDeviceReady() {
         $('#preloader').fadeOut('slow');
     }, 5000);
 	
-	var jsonUrl2 = 'https://www.norimaq.com.br/tutormaq//wp-json/acf/v3/options/configuracoes/';
-	
 	function buildJsonURL(idPage){
 
 		var jsonUrl = 'https://www.norimaq.com.br/tutormaq/wp-json/wp/v2/modelo/';
@@ -81,16 +79,15 @@ function onDeviceReady() {
 			     output += '<\/script>';
 			})
 		})
-		if (output.length) {
+	if (output.length) {
             $('.posts_archive_page').append(output);
             $('.posts_archive_page.pdf p').remove();
 		}
-	  });
 	 });
 	
 	$.ajax({
 		    dataType: 'json',
-		    url: jsonUrl2,
+		    url: 'https://www.norimaq.com.br/tutormaq//wp-json/acf/v3/options/configuracoes/',0
 	        })
 	        .done(function(response){
 
@@ -109,8 +106,6 @@ function onDeviceReady() {
 			$('#header').css("background-color", response.acf.cor);
 			$('#footer').append(footer);
 			$('#footer').css("background-color", response.acf.cor2);
-			$('ul.posts a').css("color", response.acf.cor);
-			$('.toogle_wrap_blog').css("background-color", response.acf.cor);
 		
 	});
 	
