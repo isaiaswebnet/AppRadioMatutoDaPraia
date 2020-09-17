@@ -48,7 +48,8 @@ function onDeviceReady() {
 				 output += '<figure id="video' + value + '" class="videocontainer pdf">';
 			     output += '<div>';
 			     //output += '<iframe id="video' + value + '" src="//docs.google.com/gview?url=' + object.pdf + '&embedded=true" frameborder="0"></iframe>';
-			     output += '<iframe src="//drive.google.com/viewerng/viewer?embedded=true&url=' + object.pdf + '" frameborder="0"></iframe>';
+			     //output += '<iframe src="//drive.google.com/viewerng/viewer?embedded=true&url=' + object.pdf + '" frameborder="0"></iframe>';
+			     output += '<iframe src="//www.norimaq.com.br/tutormaq/app/print/web/?file=' + object.pdf + '" frameborder="0"></iframe>';
 			     output += '<img class="mazoom" src="images/icons/mais-zoom.jpg" onclick="openFull' + value + '()" />';
 			     output += '<img id="mezoom' + value+ '" class="mezoom" src="images/icons/manos-zoom.jpg" onclick="closeFull' + value+ '()" />';
 			     output += '</div>';
