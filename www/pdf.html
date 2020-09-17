@@ -1,4 +1,4 @@
-<html>
+f<html>
 <head>
 <title>TutorMaq</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,7 +20,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 //$("#content").html("Hello, World! Demo JQuery Mobile com PhoneGap 2!"); 
 	
-function print(encodedString) {
+function PrintPDF(encodedString) {
 //var encodedString = 'base64encodedStringHere';
 window.plugins.PrintPDF.print({
     data: encodedString,
@@ -67,7 +67,7 @@ window.plugins.PrintPDF.print({
 			     //output += '<iframe id="video' + value + '" src="//docs.google.com/gview?url=' + object.pdf + '&embedded=true" frameborder="0"></iframe>';
 			     //output += '<iframe src="//drive.google.com/viewerng/viewer?embedded=true&url=' + object.pdf + '" frameborder="0"></iframe>';
 			     output += '<iframe src="https://www.norimaq.com.br/tutormaq/app/print/web/viewer.html?file=' + object.pdf + '" frameborder="0"></iframe>';
-			     output += '<img class="mazoom" src="images/icons/mais-zoom.jpg" onclick="print(' + object.pdf + ')" />';
+			     output += '<a href="javascript:;" onclick="PrintPDF(' + object.pdf + ')">IMPRIMIR</a>';
 			     output += '<img class="mazoom" src="images/icons/mais-zoom.jpg" onclick="openFull' + value + '()" />';
 			     output += '<img id="mezoom' + value+ '" class="mezoom" src="images/icons/manos-zoom.jpg" onclick="closeFull' + value+ '()" />';
 			     output += '</div>';
